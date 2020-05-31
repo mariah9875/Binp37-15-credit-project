@@ -1,13 +1,7 @@
 
 # load packages
 library(DESeq2)
-library(tidyverse)
-library(genefilter)
-library(ggplot2)
-library(apeglm)
-library(genefilter)
 library(pheatmap)
-library(plyr)
 library(plotly)
 library(data.table)
 
