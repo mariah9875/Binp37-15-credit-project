@@ -112,7 +112,7 @@ write.table(all_genes, file="all_regulated.txt", sep = "\t", quote = FALSE)
 plotPCA(rld) + theme_classic()
 
 # MA plot
-plotMA(res, ylim=c(-2,2))
+plotMA(res, alpha=0.05, ylim=c(-2,2))
 # MA plot with shrunken log2 fold changes.
 plotMA(resLFC, ylim=c(-2,2))
 
