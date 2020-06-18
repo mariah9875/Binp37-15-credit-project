@@ -64,7 +64,7 @@ Directory structure to run snakemake pipeline; the Snakefile is suppose to be in
 
 **projectdir/**
 
-**$\qquad$Snakefile**
+| Snakefile
 
 **$\qquad$config.yaml**
 
