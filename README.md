@@ -62,17 +62,17 @@ Directory structure to run snakemake pipeline; the Snakefile is suppose to be in
 
 **Example:**
 
-**projectdir/**
+**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;projectdir/**
 
-|               Snakefile
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Snakefile
 
-**$\qquad$config.yaml**
+**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;config.yaml**
 
-**$\qquad$GTF annotation file**
+**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;GTF annotation file**
 
-**$\qquad$data/**
+**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;data/**
 
-**$\qquad$bin/**
+**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;bin/**
 
 A file named config.yaml is created by the user, and the file has to include a list called "samples" with the names of the fastq sample files used, as shown below.
 
