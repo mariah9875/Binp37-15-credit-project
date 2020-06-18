@@ -68,7 +68,6 @@ sapply(countdata, class)
 countdata <- transform(countdata, DA026_S7=as.numeric(DA026_S7), DA027_S1=as.numeric(DA027_S1), DA028_S2=as.numeric(DA028_S2), DA035_S9=as.numeric(DA035_S9), DA036_S3=as.numeric(DA036_S3), DA050_S8=as.numeric(DA050_S8), DA056_S5=as.numeric(DA056_S5), DA057_S10=as.numeric(DA057_S10), DA058_S11=as.numeric(DA058_S11), DA059_S6=as.numeric(DA059_S6), DA061_S4=as.numeric(DA061_S4))
 sapply(countdata, mode)
 
-
 # DESeq object
 dds <- DESeqDataSetFromMatrix(countData = countdata, colData = coldata, design = ~condition)
 # Filter out lowly expressed counts
