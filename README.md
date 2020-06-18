@@ -59,6 +59,7 @@ The snakemake pipeline takes trimmed fastq files and performs the following work
 The Snakefile is designed to run with modules. If the user does not use modules; make sure that the programs are executable in the working directory, and erase lines starting with "module load" in the "shell:" section of each rule in the Snakefile.  
 
 Directory structure to run snakemake pipeline; the Snakefile is suppose to be in the same directory as the data and bin directories.
+
 **Example:**
 **projectdir/
 $\qquad$Snakefile
