@@ -121,6 +121,13 @@ norm_dds_test <- norm_dds
 # Mean of human and chimp
 human_mean <- rowMeans(norm_dds_test[,subset(coldata, coldata$condition == "Human")$sample])
 chimp_mean <- rowMeans(norm_dds_test[,subset(coldata, coldata$condition == "Chimp")$sample])
+
+# Genes found in humans and chimp
+human_genes_expressed <- norm_dds_test[,subset(coldata, coldata$condition == "Human")$sample]
+human_genes_expressed <- human_genes_expressed[rowSums(human_genes_expressed)>0,]
+chimp_genes_expressed <- norm_dds_test[,subset(coldata, coldata$condition == "Chimp")$sample]
+chimp_genes_expressed <- chimp_genes_expressed[rowSums(chimp_genes_expressed)>0,]
+
 # Mark up-regulate genes red and down-regulated genes blue
 norm_dds_test$cex <- rep(1, nrow(norm_dds_test))
 norm_dds_test[rownames(up_regulated),] <- 2
@@ -167,6 +174,9 @@ type_all <- merge(gene_info, norm_dds, by=0)
 type_upregulated <- merge(gene_info, signdiff_up, by=0)
 type_downregulated <- merge(gene_info, signdiff_low, by=0)
 write.table(type_upregulated, file="up_type.txt", sep = "\t", quote = FALSE)
+
+type_human <- merge(gene_info, human_genes_expressed, by=0)
+type_chimp <- merge(gene_info, chimp_genes_expressed, by=0)
 
 freq_type <- (table(type_all$gene_type))
 freq_type <- as.data.frame(freq_type)
