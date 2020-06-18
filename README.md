@@ -61,12 +61,12 @@ The Snakefile is designed to run with modules. If the user does not use modules;
 Directory structure to run snakemake pipeline; the Snakefile is suppose to be in the same directory as the data and bin directories.
 
 **Example:**
-**projectdir/
+**projectdir/**
 $\qquad$Snakefile
 $\qquad$config.yaml
 $\qquad$GTF annotation file 
 $\qquad$data/
-$\qquad$bin/**
+**$\qquad$bin/**
 
 A file named config.yaml is created by the user, and the file has to include a list called "samples" with the names of the fastq sample files used, as shown below.
 
